@@ -194,6 +194,40 @@ const categorySeeds: CategorySeed[] = [
       ] },
     ],
   },
+  {
+    category: 'N2 Generators',
+    vendors: [
+      { slug: 'atlas-copco-n2', name: 'Atlas Copco', domain: 'atlascopco.com', description: 'On-site nitrogen generation and gas treatment for reliable process utilities.', products: [
+        { id: 'atlas-n2-40', name: 'Membrane N₂ Generator', partNumber: 'N2-MEM-40-ALD', description: 'Compact membrane nitrogen generator for continuous inert-gas supply to ALD tools.', specs: ['40 Nm³/h', '99.5% N₂', '7 bar outlet'], price: 6480 },
+        { id: 'atlas-n2-80', name: 'PSA Nitrogen Generator', partNumber: 'N2-PSA-80-5N', description: 'PSA system for higher-purity nitrogen used in purge, carrier, and glovebox services.', specs: ['80 Nm³/h', '99.999% N₂', 'Integrated dryer'], price: 12400 },
+        { id: 'atlas-n2-120', name: 'High-Flow PSA Generator', partNumber: 'N2-PSA-120-FAB', description: 'High-flow nitrogen package for multi-tool facilities and continuous production demand.', specs: ['120 Nm³/h', '99.999% N₂', 'Remote monitoring'], price: 18600 },
+        { id: 'atlas-n2-purity', name: 'Nitrogen Purity Analyzer', partNumber: 'N2-ANL-O2-PPM', description: 'Inline oxygen analyzer for verifying nitrogen quality at the process gas point of use.', specs: ['0–1000 ppm O₂', 'Inline sample cell', '4–20 mA output'], price: 2380 },
+      ] },
+      { slug: 'peak-scientific', name: 'Peak Scientific', domain: 'peakscientific.com', description: 'Laboratory and process gas generators for consistent, local nitrogen supply.', products: [
+        { id: 'peak-n2-30', name: 'Precision N₂ Generator', partNumber: 'PEAK-N2-30-ALD', description: 'Quiet nitrogen generator sized for research tools, pilot reactors, and analytical systems.', specs: ['30 L/min', '99.999% N₂', '230 VAC'], price: 4920 },
+        { id: 'peak-n2-60', name: 'Dual-Bank N₂ Generator', partNumber: 'PEAK-N2-60-DUAL', description: 'Redundant dual-bank system for uninterrupted nitrogen supply during cylinder changeover.', specs: ['60 L/min', '99.999% N₂', 'Auto changeover'], price: 7860 },
+        { id: 'peak-n2-dryer', name: 'N₂ Dryer and Filter Pack', partNumber: 'PEAK-N2-DRY-FLT', description: 'Point-of-use filtration and drying package for moisture-sensitive precursor processes.', specs: ['<1 ppm H₂O', '0.01 µm filter', '1/4 in VCR'], price: 1640 },
+        { id: 'peak-n2-monitor', name: 'Gas Quality Monitor', partNumber: 'PEAK-N2-MON-5N', description: 'Continuous monitor for oxygen and moisture levels in nitrogen process utilities.', specs: ['O₂ + H₂O sensing', 'Alarm relay', 'Data logging'], price: 3120 },
+      ] },
+    ],
+  },
+  {
+    category: 'Chillers',
+    vendors: [
+      { slug: 'advanced-thermal', name: 'Advanced Thermal Sciences', domain: 'ats-hct.com', description: 'Recirculating chillers and thermal control systems for deposition equipment.', products: [
+        { id: 'ats-chiller-3kw', name: '3 kW Recirculating Chiller', partNumber: 'ATS-RC-3KW-ALD', description: 'Compact process chiller for chamber walls, RF sources, and high-duty thermal loads.', specs: ['3 kW cooling', '5–35°C range', '220 VAC'], price: 8420 },
+        { id: 'ats-chiller-8kw', name: '8 kW Process Chiller', partNumber: 'ATS-RC-8KW-FAB', description: 'High-capacity chiller for multi-zone ALD and plasma equipment cooling loops.', specs: ['8 kW cooling', '±0.1°C stability', 'Stainless reservoir'], price: 14600 },
+        { id: 'ats-chiller-heat', name: 'Heater-Chiller Combo Unit', partNumber: 'ATS-HC-2KW-ALD', description: 'Combined heating and cooling unit for recipes requiring controlled thermal ramps.', specs: ['-10–80°C range', '2 kW cooling', 'Ethernet control'], price: 11800 },
+        { id: 'ats-flow-module', name: 'Dual-Loop Flow Module', partNumber: 'ATS-FM-2LOOP-316', description: 'Dual-loop distribution module for independently cooling chamber and source hardware.', specs: ['2 independent loops', '316L wetted path', 'Flow alarms'], price: 4280 },
+      ] },
+      { slug: 'lytron', name: 'Lytron', domain: 'lytron.com', description: 'Engineered liquid cooling systems for precision semiconductor process tools.', products: [
+        { id: 'lytron-chiller-2kw', name: 'Compact Tool Chiller', partNumber: 'LYT-LC-2KW-120', description: 'Space-efficient liquid chiller for benchtop ALD reactors and precursor delivery systems.', specs: ['2 kW cooling', '10–40°C range', '120 VAC'], price: 6240 },
+        { id: 'lytron-chiller-6kw', name: '6 kW Closed-Loop Chiller', partNumber: 'LYT-LC-6KW-230', description: 'Closed-loop unit with cleanable reservoir for continuous production cooling service.', specs: ['6 kW cooling', '±0.2°C stability', '230 VAC'], price: 10800 },
+        { id: 'lytron-heat-exchanger', name: 'Plate Heat Exchanger', partNumber: 'LYT-PHE-10KW-316', description: 'Compact plate heat exchanger for integrating facility water into an equipment cooling loop.', specs: ['10 kW duty', '316L plates', '1 in ports'], price: 2860 },
+        { id: 'lytron-pump-skid', name: 'Precision Pump Skid', partNumber: 'LYT-PMP-SKID-ALD', description: 'Flow-controlled pump skid for stable coolant delivery across distributed tool loads.', specs: ['20 L/min', 'Variable-speed pump', 'Flow sensor'], price: 4980 },
+      ] },
+    ],
+  },
 ]
 
 export const vendors: Vendor[] = categorySeeds.flatMap(({ category, vendors: categoryVendors }) => categoryVendors.map(({ products: _products, ...vendor }) => ({ ...vendor, logo: logo(vendor.name), categories: [category] })))

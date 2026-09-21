@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button'
 import { HeaderSearch } from '@/components/HeaderSearch'
 
 const categoryLinks = [
-  'Thermocouples', 'Gaskets & O-rings', 'Fittings', 'Precursor Chemicals',
-  'Precursor Containers & Bubblers', 'MFCs', 'Valves & Flow Control',
-  'Vacuum & Pumping', 'Quartz & Chamber Parts',
+  'Valves & Flow Control', 'MFCs', 'Thermocouples', 'Gaskets & O-rings',
+  'Fittings', 'Precursor Containers & Bubblers', 'Precursor Chemicals',
+  'Vacuum & Pumping', 'Quartz & Chamber Parts', 'N2 Generators', 'Chillers',
 ]
 
 function Logo() {
